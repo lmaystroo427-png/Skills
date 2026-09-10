@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" id="appName"></span>
+    <span class="brand-sub" id="appTagline"></span>
+  </div>
+  <div class="topbar-actions">
+    <select id="langSwitcher">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="ary">Darija</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <option value="it">Italiano</option>
+      <option value="de">Deutsch</option>
+    </select>
+    <button class="theme-toggle" id="themeToggle" type="button">
+      <span aria-hidden="true">🌙</span>
+    </button>
+    <div class="streak-badge" id="streakBadge">
+      <span class="streak-flame">🔥</span>
+      <span class="streak-num" id="streakNum">0</span>
+      <span class="streak-label" id="streakLabel"></span>
+    </div>
+  </div>
+</header>
+
+<nav class="shelf-nav" id="shelfNav"></nav>
+
+<main id="mainView">
+
+  <!-- الصفحة الرئيسية: لوحة القراءة -->
+  <section id="dashboardView" class="view">
+    <div class="reading-hero">
+      <div class="hero-text">
+        <p class="hero-kicker" id="heroKicker"></p>
+        <h1 id="continueTitle"></h1>
+        <p class="hero-desc" id="continueDesc"></p>
+        <button class="btn-primary" id="continueBtn"></button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num" id="statCompleted">0</div>
+          <div class="stat-label" id="statCompletedLabel"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statBooks">0</div>
+          <div class="stat-label" id="statBooksLabel"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statFinished">0</div>
+          <div class="stat-label" id="statFinishedLabel"></div>
+        </div>
+      </div>
+    </div>
+
+    <input type="search" id="searchInput">
+    <div id="shelvesContainer"></div>
+  </section>
+
+  <!-- صفحة الكتاب (المسار) -->
+  <section id="trackView" class="view hidden">
+    <div class="track-actions">
+      <button class="btn-back" id="backToShelf"></button>
+      <button class="btn-back btn-reset" id="resetProgress"></button>
+    </div>
+    <div class="track-header">
+      <div class="track-spine" id="trackSpine"></div>
+      <div class="track-info">
+        <div class="track-meta">
+          <p class="track-author" id="trackAuthor"></p>
+          <span class="track-level" id="trackLevel"></span>
+          <span class="track-duration" id="trackDuration"></span>
+        </div>
+        <h1 id="trackTitle"></h1>
+        <p class="track-summary" id="trackSummary"></p>
+        <div class="progress-track">
+          <div class="progress-fill" id="trackProgressFill"></div>
+        </div>
+        <p class="progress-text" id="trackProgressText"></p>
+      </div>
+    </div>
+    <ol class="lesson-list" id="lessonList"></ol>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" aria-live="polite" role="status"></div>
+
+<script src="data.js"></script>
+<script src="translations.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
