@@ -3,13 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Masar — Learn a New Skill Every Day | Free Skills Courses</title>
+<meta name="description" content="Masar is a free, multilingual skills library: programming, languages, design, business, and life skills. Short, focused lessons you can finish today, in Arabic, Darija, French, English, and more.">
+<meta name="keywords" content="learn skills online, free online courses, programming for beginners, learn python, learn javascript, self-improvement, تعلم مهارات, دورات مجانية">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Masar">
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE/">
+<meta property="og:title" content="Masar — Learn a New Skill Every Day">
+<meta property="og:description" content="A free, multilingual skills library: programming, languages, design, business, and life skills, in short focused lessons.">
+<meta property="og:image" content="https://YOUR-DOMAIN-HERE/icon-512.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Masar — Learn a New Skill Every Day">
+<meta name="twitter:description" content="A free, multilingual skills library: programming, languages, design, business, and life skills.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN-HERE/icon-512.png">
+
+<meta name="theme-color" content="#3D2E22">
+<link rel="icon" href="./icon-192.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Masar",
+  "description": "A free, multilingual skills library offering short, focused learning tracks in programming, languages, design, business, and life skills.",
+  "url": "https://YOUR-DOMAIN-HERE/",
+  "logo": "https://YOUR-DOMAIN-HERE/icon-512.png",
+  "sameAs": []
+}
+</script>
+<script>
+  // تنبيه: القيم "masar_lang_v1" / "masar_theme_v1" وقائمة اللغات هنا يجب أن
+  // تبقى مطابقة لـ LANG_KEY / THEME_KEY / SUPPORTED_LANGS في app.js.
+  // هذا السكربت ينفَّذ مبكرًا (قبل app.js) فقط لتفادي وميض بصري عند التحميل.
+  try {
+    const savedLanguage = localStorage.getItem("masar_lang_v1");
+    const supportedLanguages = ["en", "ar", "ary", "fr", "es", "pt", "it", "de"];
+    const language = supportedLanguages.includes(savedLanguage) ? savedLanguage : "en";
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+  } catch (error) {
+    document.documentElement.lang = "en";
+    document.documentElement.dir = "ltr";
+  }
+  try {
+    const savedTheme = localStorage.getItem("masar_theme_v1");
+    document.documentElement.setAttribute("data-theme", savedTheme === "dark" ? "dark" : "light");
+  } catch (error) {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="./style.css">
+<link rel="manifest" href="./manifest.json">
 </head>
 <body>
+
+<noscript>
+  <div class="noscript-banner">This app needs JavaScript enabled to work. Please enable it in your browser settings. / يحتاج هذا التطبيق إلى تفعيل JavaScript ليعمل. من فضلك فعّله في إعدادات متصفحك.</div>
+</noscript>
 
 <header class="topbar">
   <div class="brand">
@@ -27,8 +86,18 @@
       <option value="it">Italiano</option>
       <option value="de">Deutsch</option>
     </select>
-    <button class="theme-toggle" id="themeToggle" type="button">
+    <button class="icon-btn" id="exportBtn" type="button" aria-label="Export progress" title="Export progress">
+      <span aria-hidden="true">⬇</span>
+    </button>
+    <button class="icon-btn" id="importBtn" type="button" aria-label="Import progress" title="Import progress">
+      <span aria-hidden="true">⬆</span>
+    </button>
+    <input type="file" id="importFileInput" accept="application/json" class="visually-hidden" tabindex="-1">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
       <span aria-hidden="true">🌙</span>
+    </button>
+    <button class="icon-btn" id="accountBtn" type="button" aria-label="Account" title="Account">
+      <span aria-hidden="true">👤</span>
     </button>
     <div class="streak-badge" id="streakBadge">
       <span class="streak-flame">🔥</span>
@@ -37,6 +106,21 @@
     </div>
   </div>
 </header>
+
+<div id="authModalOverlay" class="auth-overlay hidden">
+  <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <button class="auth-close" id="authModalClose" type="button" aria-label="Close">✕</button>
+    <h2 id="authModalTitle"></h2>
+    <p class="auth-status" id="authStatusText"></p>
+    <div id="authFormArea">
+      <input type="email" id="authEmail" class="auth-input" autocomplete="email">
+      <input type="password" id="authPassword" class="auth-input" autocomplete="current-password">
+      <button class="btn-primary auth-submit" id="authSignInBtn" type="button"></button>
+      <button class="btn-back auth-submit" id="authSignUpBtn" type="button"></button>
+    </div>
+    <button class="btn-back auth-submit hidden" id="authSignOutBtn" type="button"></button>
+  </div>
+</div>
 
 <nav class="shelf-nav" id="shelfNav"></nav>
 
@@ -67,8 +151,14 @@
       </div>
     </div>
 
+    <div class="achievements-section">
+      <h2 class="achievements-title" id="achievementsTitle"></h2>
+      <div id="achievementsGrid" class="achievements-grid"></div>
+    </div>
+
+    <label for="searchInput" class="visually-hidden" id="searchInputLabel"></label>
     <input type="search" id="searchInput">
-    <div id="shelvesContainer"></div>
+    <div id="shelvesContainer" aria-live="polite"></div>
   </section>
 
   <!-- صفحة الكتاب (المسار) -->
@@ -77,31 +167,46 @@
       <button class="btn-back" id="backToShelf"></button>
       <button class="btn-back btn-reset" id="resetProgress"></button>
     </div>
-    <div class="track-header">
-      <div class="track-spine" id="trackSpine"></div>
-      <div class="track-info">
-        <div class="track-meta">
-          <p class="track-author" id="trackAuthor"></p>
-          <span class="track-level" id="trackLevel"></span>
-          <span class="track-duration" id="trackDuration"></span>
-        </div>
-        <h1 id="trackTitle"></h1>
-        <p class="track-summary" id="trackSummary"></p>
-        <div class="progress-track">
-          <div class="progress-fill" id="trackProgressFill"></div>
-        </div>
-        <p class="progress-text" id="trackProgressText"></p>
-      </div>
+
+    <div id="trackNotFound" class="not-found hidden">
+      <h1 id="notFoundTitle"></h1>
+      <p id="notFoundDesc"></p>
+      <button class="btn-primary" id="notFoundBrowseBtn"></button>
     </div>
-    <ol class="lesson-list" id="lessonList"></ol>
+
+    <div id="trackContent">
+      <div class="track-header">
+        <div class="track-spine" id="trackSpine"></div>
+        <div class="track-info">
+          <div class="track-meta">
+            <p class="track-author" id="trackAuthor"></p>
+            <span class="track-level" id="trackLevel"></span>
+            <span class="track-duration" id="trackDuration"></span>
+          </div>
+          <h1 id="trackTitle"></h1>
+          <p class="track-summary" id="trackSummary"></p>
+          <div class="progress-track" id="trackProgressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress-fill" id="trackProgressFill"></div>
+          </div>
+          <p class="progress-text" id="trackProgressText"></p>
+          <div id="certificateWrap"></div>
+        </div>
+      </div>
+      <ol class="lesson-list" id="lessonList"></ol>
+    </div>
   </section>
 
 </main>
 
 <div class="toast" id="toast" aria-live="polite" role="status"></div>
 
-<script src="data.js"></script>
-<script src="translations.js"></script>
-<script src="app.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" integrity="sha384-oaMLBGEzBOJx3UHwac0cVndtX5fxGQIfnAeFZ35RTgqPcYlbprH9o9PUV/F8Le07" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha384-F/bZzf7p3Joyp5psL90p/p89AZJsndkSoGwRpXcZhleCWhd8SnRuoYo4d0yirjJp" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js" integrity="sha384-FWJTgPmIGm1+zpNhubuHRC/ulS1UK7hAZ7qiUUmKD8yGfPcn5ZXYBd2qRgi6L8Tu" crossorigin="anonymous"></script>
+<script src="./data.js"></script>
+<script src="./translations.js"></script>
+<script src="./app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./auth-sync.js"></script>
 </body>
 </html>

@@ -55,12 +55,6 @@ const UI_STRINGS = {
     fr: "Commencez votre premier livre", es: "Empieza tu primer libro",
     pt: "Comece seu primeiro livro", it: "Inizia il tuo primo libro", de: "Starte dein erstes Buch"
   },
-  startDesc: {
-    en: "Choose a skill from the shelves to begin your journey.", ar: "اختر مهارة من الأرفف أدناه لتبدأ رحلتك.",
-    ary: "Khtar chi maharat mn rrofouf bach tbda l-masira.", fr: "Choisissez une compétence pour commencer votre parcours.",
-    es: "Elige una habilidad de las estanterías para comenzar.", pt: "Escolha uma habilidade para começar sua jornada.",
-    it: "Scegli una competenza dagli scaffali per iniziare.", de: "Wähle eine Fähigkeit aus dem Regal, um zu beginnen."
-  },
   continueTitle: {
     en: 'Continue "{title}"', ar: 'أكمل "{title}"', ary: 'Kmml "{title}"',
     fr: 'Continuez "{title}"', es: 'Continúa "{title}"', pt: 'Continue "{title}"',
@@ -203,5 +197,111 @@ const UI_STRINGS = {
     pt: "Não foi possível redefinir o progresso. Verifique as configurações do navegador.",
     it: "Impossibile azzerare i progressi. Controlla le impostazioni del browser.",
     de: "Fortschritt konnte nicht zurückgesetzt werden. Prüfe deine Browsereinstellungen."
-  }
+  },
+  noscriptMessage: {
+    en: "Masar needs JavaScript enabled to work. Please enable it in your browser settings.",
+    ar: "يحتاج تطبيق مسار إلى تفعيل JavaScript ليعمل. من فضلك فعّله في إعدادات متصفحك.",
+    ary: "Masar khassha JavaScript mfa33el bach tkhdem. 3afak f3elha f i3dadat l-mowassih.",
+    fr: "Masar a besoin de JavaScript pour fonctionner. Veuillez l'activer dans les réglages de votre navigateur.",
+    es: "Masar necesita JavaScript activado para funcionar. Actívalo en la configuración de tu navegador.",
+    pt: "O Masar precisa que o JavaScript esteja ativado para funcionar. Ative-o nas configurações do navegador.",
+    it: "Masar richiede JavaScript attivo per funzionare. Attivalo nelle impostazioni del browser.",
+    de: "Masar benötigt aktiviertes JavaScript, um zu funktionieren. Bitte aktiviere es in deinen Browsereinstellungen."
+  },
+  trackNotFoundTitle: {
+    en: "This book isn't on the shelf", ar: "هذا الكتاب غير موجود على الرف", ary: "Had lkteb machi mawjoud f rref",
+    fr: "Ce livre n'est pas sur l'étagère", es: "Este libro no está en la estantería", pt: "Este livro não está na estante",
+    it: "Questo libro non è sullo scaffale", de: "Dieses Buch steht nicht im Regal"
+  },
+  trackNotFoundDesc: {
+    en: "The link you followed may be outdated. Browse the shelves to find another skill.",
+    ar: "قد يكون الرابط الذي اتبعته قديمًا. تصفّح الأرفف لتجد مهارة أخرى.",
+    ary: "Yemkn l-link li tbe3ti 9dim. Dour f rrofouf bach tl9a maharat khra.",
+    fr: "Le lien que vous avez suivi est peut-être obsolète. Parcourez les étagères pour trouver une autre compétence.",
+    es: "El enlace que seguiste puede estar desactualizado. Explora las estanterías para encontrar otra habilidad.",
+    pt: "O link que você seguiu pode estar desatualizado. Explore as estantes para encontrar outra habilidade.",
+    it: "Il link seguito potrebbe non essere più valido. Sfoglia gli scaffali per trovare un'altra competenza.",
+    de: "Der Link, dem du gefolgt bist, ist möglicherweise veraltet. Durchsuche die Regale nach einer anderen Fähigkeit."
+  },
+  exportProgress: {
+    en: "Export progress", ar: "تصدير التقدم", ary: "Exporti tta9addom", fr: "Exporter la progression",
+    es: "Exportar progreso", pt: "Exportar progresso", it: "Esporta progressi", de: "Fortschritt exportieren"
+  },
+  importProgress: {
+    en: "Import progress", ar: "استيراد التقدم", ary: "Importi tta9addom", fr: "Importer la progression",
+    es: "Importar progreso", pt: "Importar progresso", it: "Importa progressi", de: "Fortschritt importieren"
+  },
+  importSuccess: {
+    en: "Progress imported successfully.", ar: "تم استيراد التقدم بنجاح.", ary: "Ttadi l-import dyal tta9addom b njah.",
+    fr: "Progression importée avec succès.", es: "Progreso importado correctamente.", pt: "Progresso importado com sucesso.",
+    it: "Progressi importati con successo.", de: "Fortschritt erfolgreich importiert."
+  },
+  importError: {
+    en: "This file could not be read as a Masar backup.", ar: "تعذّرت قراءة هذا الملف كنسخة احتياطية من مسار.",
+    ary: "Ma 9dernach n9raw had lfichier b7al backup dyal Masar.",
+    fr: "Ce fichier n'a pas pu être lu comme une sauvegarde Masar.",
+    es: "No se pudo leer este archivo como una copia de seguridad de Masar.",
+    pt: "Não foi possível ler este arquivo como um backup do Masar.",
+    it: "Impossibile leggere questo file come backup di Masar.",
+    de: "Diese Datei konnte nicht als Masar-Sicherung gelesen werden."
+  },
+  searchLabel: {
+    en: "Search for a skill", ar: "ابحث عن مهارة", ary: "Qelleb 3la maharat", fr: "Rechercher une compétence",
+    es: "Buscar una habilidad", pt: "Buscar uma habilidade", it: "Cerca una competenza", de: "Nach einer Fähigkeit suchen"
+  },
+  skillToolsLabel: {
+    en: "Tools and techniques", ar: "الأدوات والتقنيات", ary: "Lwasayel w ttiqniyat",
+    fr: "Outils et techniques", es: "Herramientas y técnicas", pt: "Ferramentas e técnicas",
+    it: "Strumenti e tecniche", de: "Werkzeuge und Techniken"
+  },
+  commonMistakeLabel: {
+    en: "Common mistake: ", ar: "خطأ شائع: ", ary: "Ghalta kaytkarrer bzzaf: ",
+    fr: "Erreur fréquente : ", es: "Error común: ", pt: "Erro comum: ",
+    it: "Errore comune: ", de: "Häufiger Fehler: "
+  },
+  achievementsTitle: {
+    en: "Achievements", ar: "الإنجازات", ary: "Njazat", fr: "Réussites",
+    es: "Logros", pt: "Conquistas", it: "Obiettivi", de: "Erfolge"
+  },
+  achievementUnlocked: {
+    en: "Achievement unlocked: {name}!", ar: "إنجاز جديد: {name}!", ary: "Njaz jdid: {name}!",
+    fr: "Nouveau succès : {name} !", es: "¡Logro desbloqueado: {name}!", pt: "Conquista desbloqueada: {name}!",
+    it: "Obiettivo sbloccato: {name}!", de: "Erfolg freigeschaltet: {name}!"
+  },
+  achievementLocked: {
+    en: "Not unlocked yet", ar: "لم يُنجز بعد", ary: "Mazal ma tnjaz",
+    fr: "Pas encore débloqué", es: "Aún no desbloqueado", pt: "Ainda não desbloqueado",
+    it: "Non ancora sbloccato", de: "Noch nicht freigeschaltet"
+  },
+  downloadCertificate: {
+    en: "Download certificate", ar: "تحميل الشهادة", ary: "Download chahada",
+    fr: "Télécharger le certificat", es: "Descargar certificado", pt: "Baixar certificado",
+    it: "Scarica certificato", de: "Zertifikat herunterladen"
+  },
+  certificateHeading: {
+    en: "Certificate of Completion", ar: "شهادة إتمام", ary: "Chahada dyal tkmil",
+    fr: "Certificat de réussite", es: "Certificado de finalización", pt: "Certificado de conclusão",
+    it: "Certificato di completamento", de: "Abschlusszertifikat"
+  },
+  certificateDate: {
+    en: "Awarded on {date}", ar: "مُنحت بتاريخ {date}", ary: "Ttmenhat f {date}",
+    fr: "Décerné le {date}", es: "Otorgado el {date}", pt: "Concedido em {date}",
+    it: "Rilasciato il {date}", de: "Verliehen am {date}"
+  },
+  achv_first_lesson_title: { en: "First Step", ar: "الخطوة الأولى", ary: "Lakhtwa loula", fr: "Premier pas", es: "Primer paso", pt: "Primeiro passo", it: "Primo passo", de: "Erster Schritt" },
+  achv_first_lesson_desc: { en: "Complete your first lesson", ar: "أكمل درسك الأول", ary: "Kmmel awal dars", fr: "Terminez votre première leçon", es: "Completa tu primera lección", pt: "Conclua sua primeira lição", it: "Completa la tua prima lezione", de: "Schließe deine erste Lektion ab" },
+  achv_ten_lessons_title: { en: "Getting Started", ar: "بداية جادة", ary: "Bidaya jadia", fr: "En route", es: "Empezando en serio", pt: "Pegando ritmo", it: "Si comincia", de: "Guter Start" },
+  achv_ten_lessons_desc: { en: "Complete 10 lessons", ar: "أكمل 10 دروس", ary: "Kmmel 10 dorous", fr: "Terminez 10 leçons", es: "Completa 10 lecciones", pt: "Conclua 10 lições", it: "Completa 10 lezioni", de: "Schließe 10 Lektionen ab" },
+  achv_fifty_lessons_title: { en: "Dedicated Learner", ar: "متعلم مثابر", ary: "Mote3allem mjtahed", fr: "Apprenant assidu", es: "Alumno dedicado", pt: "Aluno dedicado", it: "Studente dedicato", de: "Engagierter Lerner" },
+  achv_fifty_lessons_desc: { en: "Complete 50 lessons", ar: "أكمل 50 درسًا", ary: "Kmmel 50 dars", fr: "Terminez 50 leçons", es: "Completa 50 lecciones", pt: "Conclua 50 lições", it: "Completa 50 lezioni", de: "Schließe 50 Lektionen ab" },
+  achv_first_book_title: { en: "First Book Finished", ar: "أول كتاب مكتمل", ary: "Awal kteb kmel", fr: "Premier livre terminé", es: "Primer libro terminado", pt: "Primeiro livro concluído", it: "Primo libro completato", de: "Erstes Buch beendet" },
+  achv_first_book_desc: { en: "Finish your first track", ar: "أنهِ أول مسار لك", ary: "Sali awal massar dyalek", fr: "Terminez votre premier parcours", es: "Termina tu primer curso", pt: "Termine seu primeiro curso", it: "Completa il tuo primo percorso", de: "Schließe deinen ersten Kurs ab" },
+  achv_three_books_title: { en: "Bookworm", ar: "عاشق الكتب", ary: "3achi9 lkotob", fr: "Rat de bibliothèque", es: "Ratón de biblioteca", pt: "Rato de biblioteca", it: "Topo di biblioteca", de: "Bücherwurm" },
+  achv_three_books_desc: { en: "Finish 3 tracks", ar: "أنهِ 3 مسارات", ary: "Sali 3 massarat", fr: "Terminez 3 parcours", es: "Termina 3 cursos", pt: "Termine 3 cursos", it: "Completa 3 percorsi", de: "Schließe 3 Kurse ab" },
+  achv_streak_3_title: { en: "3-Day Streak", ar: "سلسلة 3 أيام", ary: "Silsila 3 dyam", fr: "Série de 3 jours", es: "Racha de 3 días", pt: "Sequência de 3 dias", it: "Serie di 3 giorni", de: "3-Tage-Serie" },
+  achv_streak_3_desc: { en: "Learn 3 days in a row", ar: "تعلّم 3 أيام متتالية", ary: "T3allem 3 dyam mtwaliyin", fr: "Apprenez 3 jours de suite", es: "Aprende 3 días seguidos", pt: "Aprenda 3 dias seguidos", it: "Impara per 3 giorni di fila", de: "Lerne 3 Tage in Folge" },
+  achv_streak_7_title: { en: "Week Warrior", ar: "محارب الأسبوع", ary: "Moharib ssimana", fr: "Guerrier de la semaine", es: "Guerrero de la semana", pt: "Guerreiro da semana", it: "Guerriero della settimana", de: "Wochenkrieger" },
+  achv_streak_7_desc: { en: "Learn 7 days in a row", ar: "تعلّم 7 أيام متتالية", ary: "T3allem 7 dyam mtwaliyin", fr: "Apprenez 7 jours de suite", es: "Aprende 7 días seguidos", pt: "Aprenda 7 dias seguidos", it: "Impara per 7 giorni di fila", de: "Lerne 7 Tage in Folge" },
+  achv_streak_30_title: { en: "Monthly Master", ar: "سيد الشهر", ary: "Sid chhar", fr: "Maître du mois", es: "Maestro del mes", pt: "Mestre do mês", it: "Maestro del mese", de: "Meister des Monats" },
+  achv_streak_30_desc: { en: "Learn 30 days in a row", ar: "تعلّم 30 يومًا متتاليًا", ary: "T3allem 30 nhar mtwaliyin", fr: "Apprenez 30 jours de suite", es: "Aprende 30 días seguidos", pt: "Aprenda 30 dias seguidos", it: "Impara per 30 giorni di fila", de: "Lerne 30 Tage in Folge" }
 };
