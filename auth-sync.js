@@ -3,8 +3,8 @@
 // ===================================================================
 // خاصك تبدّل هاد القيمتين بلي ديالك (Project Settings → API فـ Supabase).
 // بلا ما تبدلهم، هاد الملف كيبقى معطّل بأمان وما كيأثرش على باقي الموقع.
-const SUPABASE_URL = "https://YOUR-PROJECT.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR-ANON-PUBLIC-KEY";
+const SUPABASE_URL = "https://riwskoyckuuvkvwxxywj.supabase.co/rest/v1/progress";
+const SUPABASE_ANON_KEY = "sb_publishable_G-A82-SGESgDGOC9vgDuTw_E3OVvjmt";
 
 const SYNC_ENABLED = !SUPABASE_URL.includes("YOUR-PROJECT");
 let supabaseClient = null;
