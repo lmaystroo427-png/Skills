@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masar — Learn a New Skill Every Day | Free Skills Courses</title>
+<meta name="description" content="Masar is a free, multilingual skills library: programming, languages, design, business, and life skills. Short, focused lessons you can finish today, in Arabic, Darija, French, English, and more.">
+<meta name="keywords" content="learn skills online, free online courses, programming for beginners, learn python, learn javascript, self-improvement, تعلم مهارات, دورات مجانية">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Masar">
+<link rel="canonical" href="https://lmaystroo427-png.github.io/Skills/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lmaystroo427-png.github.io/Skills/">
+<meta property="og:title" content="Masar — Learn a New Skill Every Day">
+<meta property="og:description" content="A free, multilingual skills library: programming, languages, design, business, and life skills, in short focused lessons.">
+<meta property="og:image" content="https://lmaystroo427-png.github.io/Skills/icon-512.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Masar — Learn a New Skill Every Day">
+<meta name="twitter:description" content="A free, multilingual skills library: programming, languages, design, business, and life skills.">
+<meta name="twitter:image" content="https://lmaystroo427-png.github.io/Skills/icon-512.png">
+
+<!-- ملاحظة أمان: GitHub Pages (الاستضافة الحالية) لا يسمح بضبط HTTP headers
+     حقيقية (لا يوجد خادم قابل للتهيئة)، لذلك CSP هنا عبر <meta> وليس عبر
+     Content-Security-Policy header حقيقي. هذا أضعف قليلاً (مثلاً meta CSP
+     لا يدعم frame-ancestors)، لكنه أفضل من غياب أي CSP كليًا. لو انتقل
+     المشروع لاستضافة تدعم headers مخصصة (Netlify/Vercel/Cloudflare Pages)،
+     يُفضَّل نقل هذا لملف headers حقيقي بدل meta tag. -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: blob:;
+  connect-src 'self' https://riwskoyckuuvkvwxxywj.supabase.co;
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'self';
+">
+<meta name="theme-color" content="#3D2E22">
+<link rel="icon" href="./icon-192.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Masar",
+  "description": "A free, multilingual skills library offering short, focused learning tracks in programming, languages, design, business, and life skills.",
+  "url": "https://lmaystroo427-png.github.io/Skills/",
+  "logo": "https://lmaystroo427-png.github.io/Skills/icon-512.png",
+  "sameAs": []
+}
+</script>
+<script>
+  // تنبيه: القيم "masar_lang_v1" / "masar_theme_v1" وقائمة اللغات هنا يجب أن
+  // تبقى مطابقة لـ LANG_KEY / THEME_KEY / SUPPORTED_LANGS في app.js.
+  // هذا السكربت ينفَّذ مبكرًا (قبل app.js) فقط لتفادي وميض بصري عند التحميل.
+  try {
+    const savedLanguage = localStorage.getItem("masar_lang_v1");
+    const supportedLanguages = ["en", "ar", "ary", "fr", "es", "pt", "it", "de"];
+    const language = supportedLanguages.includes(savedLanguage) ? savedLanguage : "en";
+    const isRtlLanguage = ["ar", "ary"].includes(language);
+    document.documentElement.lang = language;
+    document.documentElement.dir = isRtlLanguage ? "rtl" : "ltr";
+  } catch (error) {
+    document.documentElement.lang = "en";
+    document.documentElement.dir = "ltr";
+  }
+  try {
+    const savedTheme = localStorage.getItem("masar_theme_v1");
+    document.documentElement.setAttribute("data-theme", savedTheme === "dark" ? "dark" : "light");
+  } catch (error) {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="manifest" href="./manifest.json">
+</head>
+<body>
+<a class="skip-link" id="skipLink" href="#mainView">Skip to content</a>
+
+<noscript>
+  <div class="noscript-banner">This app needs JavaScript enabled to work. Please enable it in your browser settings. / يحتاج هذا التطبيق إلى تفعيل JavaScript ليعمل. من فضلك فعّله في إعدادات متصفحك.</div>
+</noscript>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" id="appName"></span>
+    <span class="brand-sub" id="appTagline"></span>
+  </div>
+  <div class="topbar-actions">
+    <select id="langSwitcher">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="ary">Darija</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <option value="it">Italiano</option>
+      <option value="de">Deutsch</option>
+    </select>
+    <button class="icon-btn" id="exportBtn" type="button" aria-label="Export progress" title="Export progress">
+      <span aria-hidden="true">⬇</span>
+    </button>
+    <button class="icon-btn" id="importBtn" type="button" aria-label="Import progress" title="Import progress">
+      <span aria-hidden="true">⬆</span>
+    </button>
+    <button class="icon-btn" id="resetAllBtn" type="button" aria-label="Reset all progress" title="Reset all progress">
+      <span aria-hidden="true">🗑</span>
+    </button>
+    <button class="icon-btn" id="shareBtn" type="button" aria-label="Share progress" title="Share progress">
+      <span aria-hidden="true">🔗</span>
+    </button>
+    <button class="icon-btn hidden" id="installBtn" type="button" aria-label="Install app" title="Install app">
+      <span aria-hidden="true">⬢</span>
+    </button>
+    <input type="file" id="importFileInput" accept="application/json" class="visually-hidden" tabindex="-1">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+      <span aria-hidden="true">🌙</span>
+    </button>
+    <button class="icon-btn" id="accountBtn" type="button" aria-label="Account" title="Account">
+      <span aria-hidden="true">👤</span>
+    </button>
+    <button class="icon-btn" id="publicProfileBtn" type="button" aria-label="Public profile" title="Public profile">
+      <span aria-hidden="true">🌐</span>
+    </button>
+    <span id="onlineStatus" class="status-pill online">Online</span>
+    <div class="level-badge" id="levelBadge"></div>
+    <button class="icon-btn" id="skillExplorerBtn" type="button" aria-label="Skill explorer" title="Skill explorer">
+      <span aria-hidden="true">🕸️</span>
+    </button>
+    <button class="icon-btn" id="metricsDashboardBtn" type="button" aria-label="Product metrics" title="Product metrics">
+      <span aria-hidden="true">📈</span>
+    </button>
+    <div class="streak-badge" id="streakBadge">
+      <span class="streak-flame">🔥</span>
+      <span class="streak-num" id="streakNum">0</span>
+      <span class="streak-label" id="streakLabel"></span>
+    </div>
+  </div>
+</header>
+
+<div id="authModalOverlay" class="auth-overlay hidden">
+  <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <button class="auth-close" id="authModalClose" type="button" aria-label="Close">✕</button>
+    <h2 id="authModalTitle"></h2>
+    <p class="auth-status" id="authStatusText"></p>
+    <div id="authFormArea">
+      <input type="email" id="authEmail" class="auth-input" autocomplete="email">
+      <input type="password" id="authPassword" class="auth-input" autocomplete="current-password">
+      <button class="btn-primary auth-submit" id="authSignInBtn" type="button"></button>
+      <button class="btn-back auth-submit" id="authSignUpBtn" type="button"></button>
+    </div>
+    <button class="btn-back auth-submit hidden" id="authSignOutBtn" type="button"></button>
+  </div>
+</div>
+
+<div id="onboardingOverlay" class="auth-overlay hidden">
+  <div class="auth-modal onboarding-modal" role="dialog" aria-modal="true" aria-labelledby="onboardingTitle">
+    <h2 id="onboardingTitle"></h2>
+    <p class="onboarding-question" id="onboardingGoalQuestion"></p>
+    <div class="onboarding-options" id="onboardingGoalOptions"></div>
+    <p class="onboarding-question" id="onboardingLevelQuestion"></p>
+    <div class="onboarding-options" id="onboardingLevelOptions"></div>
+    <p class="onboarding-question" id="onboardingTimeQuestion"></p>
+    <div class="onboarding-options" id="onboardingTimeOptions"></div>
+    <div class="onboarding-actions">
+      <button class="btn-back" id="onboardingSkipBtn" type="button"></button>
+      <button class="btn-primary" id="onboardingSaveBtn" type="button"></button>
+    </div>
+  </div>
+</div>
+
+<div id="skillExplorerOverlay" class="auth-overlay hidden">
+  <div class="auth-modal explorer-modal" role="dialog" aria-modal="true" aria-labelledby="explorerTitle">
+    <button class="auth-close" id="explorerCloseBtn" type="button" aria-label="Close">✕</button>
+    <h2 id="explorerTitle"></h2>
+    <p class="mastery-hint" id="explorerIntro"></p>
+    <div id="explorerGrid" class="explorer-grid"></div>
+  </div>
+</div>
+
+<div id="metricsDashboardOverlay" class="auth-overlay hidden">
+  <div class="auth-modal metrics-modal" role="dialog" aria-modal="true" aria-labelledby="metricsDashboardTitle">
+    <button class="auth-close" id="metricsDashboardCloseBtn" type="button" aria-label="Close">✕</button>
+    <h2 id="metricsDashboardTitle"></h2>
+    <div id="metricsDashboardBody"></div>
+  </div>
+</div>
+
+<div id="projectWorkspaceOverlay" class="auth-overlay hidden">
+  <div class="auth-modal workspace-modal" role="dialog" aria-modal="true" aria-labelledby="workspaceTitle">
+    <button class="auth-close" id="workspaceCloseBtn" type="button" aria-label="Close">✕</button>
+    <h2 id="workspaceTitle"></h2>
+    <div id="workspaceBody"></div>
+  </div>
+</div>
+
+<div id="publicProfileOverlay" class="auth-overlay hidden">
+  <div class="auth-modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="publicProfileTitle">
+    <button class="auth-close" id="publicProfileCloseBtn" type="button" aria-label="Close">✕</button>
+    <h2 id="publicProfileTitle"></h2>
+    <div id="publicProfileBody"></div>
+  </div>
+</div>
+
+<nav class="shelf-nav" id="shelfNav"></nav>
+
+<main id="mainView">
+
+  <!-- الصفحة الرئيسية: لوحة القراءة -->
+  <section id="dashboardView" class="view">
+    <div class="reading-hero">
+      <div class="hero-text">
+        <p class="hero-kicker" id="heroKicker"></p>
+        <h1 id="continueTitle"></h1>
+        <p class="hero-desc" id="continueDesc"></p>
+        <button class="btn-primary" id="continueBtn"></button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num" id="statCompleted">0</div>
+          <div class="stat-label" id="statCompletedLabel"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statBooks">0</div>
+          <div class="stat-label" id="statBooksLabel"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="statFinished">0</div>
+          <div class="stat-label" id="statFinishedLabel"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="achievements-section">
+      <h2 class="achievements-title" id="achievementsTitle"></h2>
+      <div id="achievementsGrid" class="achievements-grid"></div>
+    </div>
+
+    <div id="pathsSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="pathsTitle"></span>
+      </div>
+      <div id="pathsGrid" class="paths-grid"></div>
+    </div>
+
+    <div id="portfolioSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="portfolioTitle"></span>
+      </div>
+      <div id="portfolioGrid" class="portfolio-grid"></div>
+    </div>
+
+    <div id="insightSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="insightTitle"></span>
+      </div>
+      <div id="insightGrid" class="insight-grid"></div>
+    </div>
+
+    <div id="journalSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="journalTitle"></span>
+      </div>
+      <div id="journalGrid" class="journal-grid"></div>
+    </div>
+
+    <div id="planSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="planTitle"></span>
+      </div>
+      <div id="learningPlanGrid" class="plan-grid"></div>
+    </div>
+
+    <div id="dailyQueueSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="dailyQueueTitle"></span>
+      </div>
+      <ol id="dailyQueueList" class="daily-queue-list"></ol>
+    </div>
+
+    <div id="quickPlanSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="quickPlanTitle"></span>
+      </div>
+      <div id="quickPlanCard" class="quick-plan-card"></div>
+    </div>
+
+    <div id="mentorSection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="mentorTitle"></span>
+      </div>
+      <div id="mentorCard" class="mentor-card"></div>
+    </div>
+
+    <div id="projectLibrarySection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="projectLibraryTitle"></span>
+      </div>
+      <div id="projectLibraryGrid" class="project-library-grid"></div>
+    </div>
+
+    <div id="communitySection" class="dashboard-panel hidden">
+      <div class="shelf-title">
+        <span id="communityTitle"></span>
+      </div>
+      <p class="mastery-hint" id="communityIntro"></p>
+      <div id="communityFeed" class="community-feed"></div>
+    </div>
+
+    <div id="recommendedSection" class="recommended-section hidden">
+      <div class="shelf-title">
+        <span id="recommendedTitle"></span>
+        <button class="edit-prefs-link" id="editPrefsBtn" type="button"></button>
+      </div>
+      <div class="books-row" id="recommendedRow"></div>
+    </div>
+
+    <div id="reviewSection" class="review-section hidden">
+      <div class="shelf-title">
+        <span id="reviewTitle"></span>
+      </div>
+      <div id="reviewQueue" class="review-queue"></div>
+    </div>
+
+    <label for="searchInput" class="visually-hidden" id="searchInputLabel"></label>
+    <input type="search" id="searchInput">
+    <div id="shelvesContainer" aria-live="polite"></div>
+  </section>
+
+  <!-- صفحة الكتاب (المسار) -->
+  <section id="trackView" class="view hidden">
+    <div class="track-actions">
+      <button class="btn-back" id="backToShelf"></button>
+      <button class="btn-back btn-reset" id="resetProgress"></button>
+    </div>
+
+    <div id="trackNotFound" class="not-found hidden">
+      <h1 id="notFoundTitle"></h1>
+      <p id="notFoundDesc"></p>
+      <button class="btn-primary" id="notFoundBrowseBtn"></button>
+    </div>
+
+    <div id="trackContent">
+      <div class="track-header">
+        <div class="track-spine" id="trackSpine"></div>
+        <div class="track-info">
+          <div class="track-meta">
+            <p class="track-author" id="trackAuthor"></p>
+            <span class="track-level" id="trackLevel"></span>
+            <span class="track-duration" id="trackDuration"></span>
+          </div>
+          <h1 id="trackTitle"></h1>
+          <p class="track-summary" id="trackSummary"></p>
+          <div class="progress-track" id="trackProgressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress-fill" id="trackProgressFill"></div>
+          </div>
+          <p class="progress-text" id="trackProgressText"></p>
+          <div id="masteryWrap"></div>
+          <div id="skillMapWrap"></div>
+          <div id="learningPathWrap"></div>
+          <div id="challengeWrap"></div>
+          <div id="projectWrap"></div>
+          <div id="evidenceWrap"></div>
+          <div id="assessmentWrap"></div>
+          <div id="certificateWrap"></div>
+        </div>
+      </div>
+      <ol class="lesson-list" id="lessonList"></ol>
+    </div>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" aria-live="polite" role="status"></div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" integrity="sha384-oaMLBGEzBOJx3UHwac0cVndtX5fxGQIfnAeFZ35RTgqPcYlbprH9o9PUV/F8Le07" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha384-F/bZzf7p3Joyp5psL90p/p89AZJsndkSoGwRpXcZhleCWhd8SnRuoYo4d0yirjJp" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js" integrity="sha384-FWJTgPmIGm1+zpNhubuHRC/ulS1UK7hAZ7qiUUmKD8yGfPcn5ZXYBd2qRgi6L8Tu" crossorigin="anonymous"></script>
+<!--
+  constants.js وmasar-logic.js يعيشان فعليًا فـ js/core/ (Single Source
+  of Truth الوحيد لهذين الملفين — لا يوجد أي نسخة مكررة فـ جذر المشروع).
+  يجب أن يُحمَّلا هنا أولًا وبهذا الترتيب بالضبط (constants قبل
+  masar-logic، وكلاهما قبل app.js)، لأن باقي السكربتات الكلاسيكية (بلا
+  type="module") تعتمد على وجودهما فـ نفس النطاق المعجمي العلوي المشترك.
+-->
+<script src="./constants.js"></script>
+<script src="./masar-logic.js"></script>
+<script src="./data.js"></script>
+<script src="./translations.js"></script>
+<script src="./app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./auth-sync.js"></script>
+<script src="./exercises.js"></script>
+<script src="./project-workspace.js"></script>
+<script src="./skill-explorer.js"></script>
+<script src="./metrics-dashboard.js"></script>
+<script src="./community.js"></script>
+<script src="./public-profile.js"></script>
+<script src="./overlay-a11y.js"></script>
+</body>
+</html>

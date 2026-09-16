@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lmaystroo427-png.github.io/Skills/sitemap.xml
